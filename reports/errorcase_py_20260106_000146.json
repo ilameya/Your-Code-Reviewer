@@ -1,0 +1,17 @@
+{
+  "path": "tests/errorcase.py",
+  "language": "python",
+  "summary": "Division by zero error",
+  "score": 20,
+  "findings": [
+    {
+      "category": "bug",
+      "severity": "high",
+      "title": "Potential Division by Zero Error",
+      "details": "The function divide does not handle division by zero.",
+      "line_start": 2,
+      "line_end": 3,
+      "suggestion": "Add a check for zero before performing the division"
+    }
+  ]
+}
