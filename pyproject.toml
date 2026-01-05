@@ -1,0 +1,20 @@
+[project]
+name = "code-reviewer"
+version = "0.1.0"
+description = "Local code reviewer CLI using Ollama"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "requests>=2.31.0",
+  "pydantic>=2.6.0",
+  "rich>=13.7.0"
+]
+
+[project.scripts]
+ocr = "ocr.cli.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
