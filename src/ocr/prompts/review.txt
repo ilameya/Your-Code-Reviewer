@@ -1,0 +1,36 @@
+You must output VALID JSON ONLY.
+
+Return JSON that matches EXACTLY this schema (same keys, no extras):
+
+{{
+  "path": "string",
+  "language": "string",
+  "summary": "string",
+  "score": 0,
+  "findings": [
+    {{
+      "category": "bug|security|style|design|performance|testing|docs",
+      "severity": "low|medium|high|critical",
+      "title": "string",
+      "details": "string",
+      "line_start": 0,
+      "line_end": 0,
+      "suggestion": "string"
+    }}
+  ]
+}}
+
+Rules:
+- Output JSON only. No markdown. No explanations outside JSON.
+- score must be an integer 0–100 and reflect the quality of the ORIGINAL code.
+- You MUST provide line_start and line_end (estimate if needed).
+- Each finding MUST include a non-null suggestion.
+- Do not output extra keys.
+- Do not output "issues". Use "findings".
+
+Now review the following code.
+
+Language: {language}
+Path: {path}
+Content:
+{code}
